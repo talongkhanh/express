@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 const port = 8000;
 
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, 'public')));
 // view engine
 app.engine('hbs', exphbs({
@@ -23,6 +23,11 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
 	res.render('about')
+});
+
+app.get('/search', (req, res) => {
+	console.log(req.query);
+	res.render('search')
 });
 // 
 app.listen(port, () => {
