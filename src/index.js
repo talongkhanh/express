@@ -26,7 +26,6 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/search', (req, res) => {
-	console.log(req.query);
 	res.render('search')
 });
 // 
