@@ -7,6 +7,10 @@ const app = express();
 const port = 8000;
 
 // app.use(morgan('combined'));
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.use(express.static(path.join(__dirname, 'public')));
 // view engine
 app.engine('hbs', exphbs({
@@ -18,17 +22,24 @@ app.set('views', path.join(__dirname, 'resources/views'));
 // 
 
 app.get('/', (req, res) => {
-	res.render('home')
+	res.render('home');
 });
 
 app.get('/about', (req, res) => {
-	res.render('about')
+	res.render('about');
 });
 
 app.get('/search', (req, res) => {
-	res.render('search')
+	res.render('search');
 });
+
+app.post('/search', (req, res) => {
+	res.send('');
+	console.log(req.body.search);
+});
+
+
 // 
 app.listen(port, () => {
-	console.log(`Server listening at http://localhost:${port}`)
+	console.log(`Server listening at http://localhost:${port}`);
 });
