@@ -4,7 +4,9 @@ const express = require('express');
 const handlebars = require('express-handlebars');
 
 const route = require('./routes');
+
 // define app
+
 const app = express();
 const port = 8000;
 
@@ -14,9 +16,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 // view engine
-app.engine('hbs', handlebars({
-	extname: '.hbs'
-}));
+app.engine(
+    'hbs',
+    handlebars({
+        extname: '.hbs',
+    }),
+);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
@@ -25,5 +30,5 @@ route(app);
 
 // listen app
 app.listen(port, () => {
-	console.log(`Server listening at http://localhost:${port}`);
+    console.log(`Server listening at http://localhost:${port}`);
 });
