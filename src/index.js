@@ -1,21 +1,20 @@
 const path = require('path');
 const express = require('express');
-// const morgan = require('morgan');
+const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 
 const route = require('./routes');
-
-// define app
-
+const db = require('./config/db');
+// connect db
+db.connect();
 const app = express();
 const port = 8000;
 
 // app.use(morgan('combined'));
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-// view engine
+
 app.engine(
     'hbs',
     handlebars({
