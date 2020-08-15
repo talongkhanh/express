@@ -11,7 +11,7 @@
     "author": "",
   "license": "ISC",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --tab-width 4 --single-quote --trailing-comma all --write"
+    "src/**/*.{js,json,scss}": "prettier --tab-width 4 --single-quote --trailing-comma all --write docs package.json"
   },
   "husky": {
     "hooks": {
