@@ -6,7 +6,7 @@ class AboutController {
 
     // [GET] /about/slug
     show(req, res) {
-        res.send('Hello World!');
+        res.render('demo', { slug: req.params.slug });
     }
 }
 
