@@ -5,10 +5,11 @@
         {{#each courses}}
         <div class="col-sm-6 col-lg-4">
             <div class="card">
-                <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+                <img class="card-img-top" src="{{ this.image }}" alt="Card image" style="width:100%">
                 <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                <h4 class="card-title">{{ this.name }}</h4>
+                <p class="card-text">{{ this.desc }}</p>
+                <button class="btn btn-primary">Mua Khóa Học</button>
                 </div>
             </div>
         </div>
