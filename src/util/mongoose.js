@@ -1,8 +1,5 @@
 module.exports = {
-    multipleToObject: (docs) => {
+    multipleToObject: function (docs) {
         return docs.map((doc) => doc.toObject());
-    },
-    toObject: (doc) => {
-        return doc.toObject();
     },
 };
