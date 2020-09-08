@@ -6,9 +6,9 @@
         <div class="col-sm-6 col-lg-4">
             <div class="card">
                 <a href="/courses/{{this.slug}}">
-                    <img class="card-img-top" src="{{ this.image }}" alt="Card image" style="width:100%">
+                    <div class="course-img" style="background-image: url({{{ this.image }}});"></div>
                 </a>
-                <div class="card-body">
+                <div class="card-body course-body">
                     <a href="/courses/{{this.slug}}">
                         <h4 class="card-title">{{ this.name }}</h4>
                     </a>

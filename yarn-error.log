@@ -1,0 +1,60 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\longk\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add mongoose-slug-generator
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\longk\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\150\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\nodejs;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Users\longk\AppData\Local\Microsoft\WindowsApps;C:\Users\longk\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.1.2\bin;C:\Users\longk\AppData\Roaming\Composer\vendor\bin;C:\Users\longk\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'D:\Codes\express-app\node_modules\node-sass\vendor\win32-x64-72\binding.node'
+
+npm manifest: 
+  {
+      "name": "express-app",
+      "version": "1.0.0",
+      "description": "",
+      "main": "src/index.js",
+      "scripts": {
+          "start": "nodemon --inspect src/index.js",
+          "test": "echo \"Error: no test specified\" && exit 1",
+          "watch": "node-sass --watch src/resources/scss/ --output src/public/css/"
+      },
+      "author": "",
+      "license": "ISC",
+      "lint-staged": {
+          "src/**/*.{js,json,scss}": "prettier --tab-width 4 --single-quote --trailing-comma all --write",
+          "package.json": "prettier --tab-width 4 --single-quote --trailing-comma all --write"
+      },
+      "husky": {
+          "hooks": {
+              "pre-commit": "lint-staged"
+          }
+      },
+      "dependencies": {
+          "express": "^4.17.1",
+          "express-handlebars": "^5.1.0",
+          "mongoose": "^5.10.0"
+      },
+      "devDependencies": {
+          "husky": "^4.2.5",
+          "lint-staged": "^10.2.11",
+          "morgan": "^1.10.0",
+          "node-sass": "^4.14.1",
+          "nodemon": "^2.0.4",
+          "prettier": "^2.0.5"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -7,3 +7,17 @@ h1 {
 h2 {
     color: $green-color;
 }
+
+.course-img {
+    padding-top: 56%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    transition: all 0.3s ease-in-out 0s;
+}
+.course-img:hover {
+    background-size: 110%;
+}
+.course-body {
+    height: 250px;
+}
