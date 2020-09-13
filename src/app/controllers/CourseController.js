@@ -34,9 +34,13 @@ class CourseController {
     }
     //[PUT] courses/:id
     update(req, res, next) {
-        Course.findByIdAndUpdate({ _id: req.params.id }, req.body)
+        const formData = req.body;
+        formData.image = `https://img.youtube.com/vi/${req.body.videoId}/sddefault.jpg`;
+        Course.findByIdAndUpdate({ _id: req.params.id }, formData)
             .then(() => res.redirect('/me/stored/courses'))
-            .catch(next);
+            .catch((err) => {
+                next(err);
+            });
     }
 }
 
