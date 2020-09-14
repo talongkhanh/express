@@ -38,9 +38,14 @@ class CourseController {
         formData.image = `https://img.youtube.com/vi/${req.body.videoId}/sddefault.jpg`;
         Course.findByIdAndUpdate({ _id: req.params.id }, formData)
             .then(() => res.redirect('/me/stored/courses'))
-            .catch((err) => {
-                next(err);
-            });
+            .catch(next);
+    }
+    // [DELETE] courses/:id
+
+    delete(req, res, next) {
+        Course.deleteOne({ _id: req.params.id })
+            .then(() => res.redirect('back'))
+            .catch(next);
     }
 }
 
