@@ -25,6 +25,9 @@ app.engine(
             sum: function (a, b) {
                 return a + b;
             },
+            formatDate: function (date) {
+                return date.toLocaleString();
+            },
         },
     }),
 );

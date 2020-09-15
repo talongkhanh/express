@@ -24,7 +24,7 @@
                 <th scope="row">{{ sum @index 1 }}</th>
                 <td>{{ this.name }}</td>
                 <td>{{ this.level }}</td>
-                <td>{{ this.createdAt }}</td>
+                <td>{{ formatDate this.createdAt }}</td>
                 <td>
                     <a href="" class="btn btn-link restore-btn" data-id={{this._id}}><i
                             class="fas fa-trash-restore text-success"></i></a>
